@@ -2,7 +2,7 @@ module.exports = {
 
     mongodb: {
 
-        URI: 'mongodb://localhost:27017/node-clonmercadolibe'
+        URI: 'mongodb+srv://cluster0.k5s7r.mongodb.net/myFirstDatabase'
 
     }
 
