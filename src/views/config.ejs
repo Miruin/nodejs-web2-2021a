@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="/css/style1.css">
+<title>Pagina de perfil: Configuracion de usuario</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="cliente">Logo</a>
+    </div>
+    <div class="opciones">
+      <div class="botonOpciones" id="config-perfil">
+        <a href="cliente">Home</a>
+      </div>
+      <div class="botonOpciones" id="eliminar-perfil">
+        <a href="eliminar">Eliminar Usuario</a>
+      </div>
+    </div>
+    <div class="cont-perfil">
+      <div class="cont-c">
+         <div class="cont-usuario"> 
+          <div id="nick"><%= user.usuario %></div>
+          <a href="logout">Desconectar</a>
+         </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div id="cont-form-config">
+      <div id="modif" class="cont-form-c">
+        <div class="cont-frm">
+          <h1>Actualizar perfil</h1>
+          <form class="form" id="form-a" action="/config" method="POST">
+            <div id="form-content">
+              <div class="form-part">
+                <label for="usuarioActualizado">Usuario</label>
+                <input type="text" name="usuarioActualizado" value="<%= user.usuario %>" maxlength="19">
+                <label for="nombreActualizado">Nombre</label>
+                <input type="text" name="nombreActualizado" value="<%= user.nombre %>" maxlength="19">
+                <label for="apellidoActualizado">Apellido</label>
+                <input type="text" name="apellidoActualizado" value="<%= user.apellido %>" maxlength="19">
+              </div>
+              <div class="form-part">
+                <label for="correoActualizado">Correo</label>
+                <input type="text" name="correoActualizado" value="<%= user.correo %>" maxlength="49">
+                <label for="telfActualizado">Telefono</label>
+                <input type="text" name="telfActualizado" value="<%= user.telf %>" pattern="[0-9]{4}-[0-9]{7}" title="ej 0424-1234567">
+              </div>  
+            </div> 
+            <input type="submit" id="boton-actualizar" value="Actualizar">   
+          </form>
+        </div>
+      </div>
+    </div>
+      
+  </section>
+  <footer>
+      <div>
+      
+           <p>Hecho por Jose Faria Correo: josefariakike95@gmail.com telf: 0424-6375424</p>
+         
+      </div>
+  </footer>
+</body>
+</html>
+

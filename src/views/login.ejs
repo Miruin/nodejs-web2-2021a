@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="/css/style1.css">
+<!--<script src="../scripts/login.js"></script>-->
+<title>Iniciar Sesion</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="">Logo</a>
+    </div>
+    <div class="opciones">
+
+    </div>
+    <div class="cont-cuenta">
+      <div class="cont-c">
+        <a href="registro">Registrarse</a>
+      </div>
+    </div>
+
+  </header>
+  <section>
+    <% if(errorLog) {%>
+      <div><h1><%= errorLog%></h1></div>
+    <%}%>
+    <div class="cont-form">
+      <div class="cont-f">
+        <h1>Iniciar Sesion</h1>
+      <form class="form" id="form-is" action="/login" method="POST">
+        <input type="text" name="usuario" placeholder="Usuario" >
+        <input type="password" name="pw" placeholder="contraseña" >
+        <input type="submit" class="boton" id="boton" value="Iniciar Sesion">
+      </form>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+  
+       <div>
+      
+           <p>Hecho por Jose Faria Correo: josefariakike95@gmail.com telf: 0424-6375424</p>
+         
+      </div>
+  
+  </footer>
+
+</body>
+</html>
